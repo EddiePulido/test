@@ -1,0 +1,12 @@
+<div class="container p-4">
+    <h1>Create a New Product</h1>
+    <form class=form p-3 (submit)="createProduct()">
+            <label class="form-label">Title</label>
+            <input type="text" class="form-control" [(ngModel)]="newProduct.title"  name="title">
+            <label class="form-label">Price</label>
+            <input type="number" class="form-control" [(ngModel)]="newProduct.price"  name="price">
+            <label class="form-label">Image url</label>
+            <input type="text" class="form-control" [(ngModel)]="newProduct.url"  name="url">
+            <input type="submit" class="btn btn-primary mt-3 d-inline-block" value="Create">
+        </form>
+</div>

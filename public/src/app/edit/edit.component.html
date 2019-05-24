@@ -1,0 +1,14 @@
+<div class="container p-4">
+    <h1>Edit Product</h1>
+    
+    <form class=form p-3 (submit)="editProduct(product._id)">
+        <label class="form-label">Title</label>
+        <input type="text" class="form-control" [(ngModel)]="product.title" value="{{product.title}}" name="title">
+        <label class="form-label">Price</label>
+        <input type="number" class="form-control" [(ngModel)]="product.price" value="{{product.price}}" name="price">
+        <label class="form-label">Image url</label>
+        <input type="text" class="form-control" [(ngModel)]="product.url" value="{{product.url}}" name="url">
+        <input type="submit" class="btn btn-primary mt-3 d-inline-block" value="Update">
+        <button class="btn btn-primary mt-3 d-inline-block ml-3" (click)="deleteProduct(product._id)">Delete</button>
+    </form>
+</div>

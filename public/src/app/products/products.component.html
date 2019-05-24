@@ -1,0 +1,15 @@
+<div class="container p-4">
+    <h1>Products List</h1>
+    <div class="row">
+        <div *ngFor="let product of products"s>
+            <div class="container d-inline-block h-100 m-2 border">
+                <img class="img-fluid.max-width: 100%" [src]="product.url" [alt]="product.title">
+                <h5>{{ product.title }}</h5>
+                <h5>${{ product.price.toFixed(2) }}</h5>
+                <button class="btn btn-primary d-inline-block float-left" (click)="onEdit(product._id)">Edit</button>
+                <button class="btn btn-danger d-inline-block float-right" (click)="deleteProduct(product._id)">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>
+<router-outlet></router-outlet>
